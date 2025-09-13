@@ -1,0 +1,94 @@
+mode: rule
+mixed-port: 7897
+allow-lan: false
+log-level: info
+ipv6: false
+external-controller: ''
+secret: Hsciddiusvbjdfihu
+unified-delay: true
+profile:
+  store-selected: true
+external-controller-unix: /var/tmp/verge/verge-mihomo.sock
+dns:
+  enabled: true
+  ipv6: true
+  listen: 127.0.0.1:53
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  use-hosts: true
+  nameserver-policy:
+    in.byw.lol: 223.5.5.5
+    '*.google.com': 8.8.8.8
+    '*.tw': 1.1.1.1
+    testflight.apple.com: 8.8.8.8
+    '*.tmall.com': 223.5.5.5
+    '*.taobao.com': 223.5.5.5
+    '*.alicdn.com': 223.5.5.5
+    '*.aliyun.com': 223.5.5.5
+    '*.alipay*.com': 223.5.5.5
+    '*.alibaba*.com': 223.5.5.5
+    '*.alimama*.com': 223.5.5.5
+    '*.qq.com': 223.5.5.5
+    '*.tencent.com': 223.5.5.5
+    '*.weixin.com': 223.5.5.5
+    '*.qpic.cn': 223.5.5.5
+    '*.jd.com': 223.5.5.5
+    '*.bilibili.com': 223.5.5.5
+    hdslb.com: 223.5.5.5
+    '*.163.com': 119.29.29.29
+    '*.126.com': 119.29.29.29
+    '*.126.net': 223.5.5.5
+    '*.127.net': 223.5.5.5
+    '*.netease.com': 223.5.5.5
+    '*.10010.com': 223.5.5.5
+    '*.unicompayment.com': 223.5.5.5
+    '*.ximalaya.com': 223.5.5.5
+    '*.baidu.com': 223.5.5.5
+    '*.bdstatic.com': 223.5.5.5
+  nameserver:
+  - 223.5.5.5
+  - 119.29.29.29
+  fallback:
+  - 1.1.1.1
+  - 8.8.8.8
+  fallback-filter:
+    geoip: true
+    ipcidr:
+    - 240.0.0.0/4
+    - 0.0.0.0/32
+hosts:
+  mtalk.google.com: 108.177.125.188
+  raw.githubusercontent.com: 151.101.76.133
+tun:
+  enable: false
+  stack: mixed
+  auto-route: true
+  strict-route: false
+  auto-detect-interface: true
+  dns-hijack:
+  - any:53
+external-controller-cors:
+  allow-origins:
+  - https://board.zash.run.place
+  allow-private-network: false
+clash-for-android:
+  append-system-dns: false
+proxies:
+- name: CN
+  type: ss
+  server: 40f0ed77c95bf109.s4b4.com
+  port: 30002
+  cipher: aes-256-gcm
+  password: '114514'
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: b3e9af3d1d.microsoft.com
+  udp: true
+  tfo: false
+proxy-groups:
+- name: ♻️ 手动切换
+  type: select
+  proxies:
+  - DIRECT
+rules: []

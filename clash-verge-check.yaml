@@ -1,0 +1,62 @@
+mode: rule
+mixed-port: 7897
+allow-lan: false
+log-level: info
+ipv6: false
+unified-delay: true
+profile:
+  store-selected: true
+dns:
+  enabled: true
+  ipv6: true
+  listen: 127.0.0.1:53
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  use-hosts: true
+  nameserver-policy:
+    in.byw.lol: 223.5.5.5
+    '*.google.com': 8.8.8.8
+    '*.tw': 1.1.1.1
+    testflight.apple.com: 8.8.8.8
+    '*.tmall.com': 223.5.5.5
+    '*.taobao.com': 223.5.5.5
+    '*.alicdn.com': 223.5.5.5
+    '*.aliyun.com': 223.5.5.5
+    '*.alipay*.com': 223.5.5.5
+    '*.alibaba*.com': 223.5.5.5
+    '*.alimama*.com': 223.5.5.5
+    '*.qq.com': 223.5.5.5
+    '*.tencent.com': 223.5.5.5
+    '*.weixin.com': 223.5.5.5
+    '*.qpic.cn': 223.5.5.5
+    '*.jd.com': 223.5.5.5
+    '*.bilibili.com': 223.5.5.5
+    hdslb.com: 223.5.5.5
+    '*.163.com': 119.29.29.29
+    '*.126.com': 119.29.29.29
+    '*.126.net': 223.5.5.5
+    '*.127.net': 223.5.5.5
+    '*.netease.com': 223.5.5.5
+    '*.10010.com': 223.5.5.5
+    '*.unicompayment.com': 223.5.5.5
+    '*.ximalaya.com': 223.5.5.5
+    '*.baidu.com': 223.5.5.5
+    '*.bdstatic.com': 223.5.5.5
+  nameserver:
+  - 223.5.5.5
+  - 119.29.29.29
+  fallback:
+  - 1.1.1.1
+  - 8.8.8.8
+  fallback-filter:
+    geoip: true
+    ipcidr:
+    - 240.0.0.0/4
+    - 0.0.0.0/32
+proxies: []
+proxy-groups:
+- name: ♻️ 手动切换
+  type: select
+  proxies:
+  - DIRECT
+rules: []
