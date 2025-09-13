@@ -3,8 +3,6 @@ mixed-port: 7897
 allow-lan: false
 log-level: info
 ipv6: false
-external-controller: ''
-secret: Hsciddiusvbjdfihu
 unified-delay: true
 dns:
   enabled: true
@@ -45,43 +43,9 @@ dns:
   nameserver:
   - 223.5.5.5
   - 119.29.29.29
-  fallback: []
-  fake-ip-filter:
-    - '*.lan'
-    - '*.local'
-    - '*.example'
-    - '*.invalid'
-  fallback-filter:
-    geoip: true
-    ipcidr:
-    - 240.0.0.0/4
-    - 0.0.0.0/32
-external-controller-cors:
-  allow-origins:
-  - https://board.zash.run.place
-  allow-private-network: false
-tun:
-  enable: false
-  stack: mixed
-  auto-route: true
-  strict-route: false
-  auto-detect-interface: true
-  dns-hijack:
-  - any:53
-external-controller-unix: /var/tmp/verge/verge-mihomo.sock
-clash-for-android:
-  append-system-dns: false
-profile:
-  store-selected: true
-hosts:
-  mtalk.google.com: 108.177.125.188
-  raw.githubusercontent.com: 151.101.76.133
-proxies: []
 
-proxy-groups:
+rules: 
 - name: PROXY
   type: select
   proxies:
   - DIRECT
-
-rules: []
