@@ -25,7 +25,7 @@ dns:
     - 0.0.0.0/32
 proxies: []
 proxy-groups:
-- name: DIRECT
+- name: PROXY
   type: select
   proxies:
   - DIRECT
