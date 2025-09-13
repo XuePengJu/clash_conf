@@ -4,6 +4,8 @@ allow-lan: false
 log-level: info
 ipv6: false
 unified-delay: true
+profile:
+  store-selected: true
 dns:
   enabled: true
   ipv6: true
@@ -43,11 +45,18 @@ dns:
   nameserver:
   - 223.5.5.5
   - 119.29.29.29
-
-proxies:
-- name: PROXY
+  fallback:
+  - 1.1.1.1
+  - 8.8.8.8
+  fallback-filter:
+    geoip: true
+    ipcidr:
+    - 240.0.0.0/4
+    - 0.0.0.0/32
+proxies: []
+proxy-groups:
+- name: ♻️ 手动切换
   type: select
   proxies:
   - DIRECT
-
 rules: []
