@@ -24,9 +24,9 @@ dns:
     - 240.0.0.0/4
     - 0.0.0.0/32
 proxies: 
-- name: direct-proxy
+- name: direct_proxy
   type: direct
-- name: http-proxy
+- name: http_proxy
   type: http
   server: 127.0.0.1
   port: 7897
@@ -35,7 +35,7 @@ proxy-groups:
   type: select
   proxies:
   - DIRECT
-  - direct-proxy
-  - http-proxy
+  - direct_proxy
+  - http_proxy
 rules:
   - MATCH,DIRECT
