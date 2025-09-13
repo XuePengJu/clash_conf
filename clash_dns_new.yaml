@@ -23,19 +23,14 @@ dns:
     ipcidr:
     - 240.0.0.0/4
     - 0.0.0.0/32
-proxies: 
-- name: direct_proxy
+proxies:
+- name: direct
   type: direct
-- name: http_proxy
-  type: http
-  server: 127.0.0.1
-  port: 7897
 proxy-groups:
-- name: PROXY
+- name: ♻️ 手动切换
   type: select
   proxies:
   - DIRECT
-  - direct_proxy
-  - http_proxy
+  - direct
 rules:
   - MATCH,DIRECT
