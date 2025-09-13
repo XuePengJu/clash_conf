@@ -73,19 +73,7 @@ external-controller-cors:
   allow-private-network: false
 clash-for-android:
   append-system-dns: false
-proxies:
-- name: CN
-  type: ss
-  server: 40f0ed77c95bf109.s4b4.com
-  port: 30002
-  cipher: aes-256-gcm
-  password: '114514'
-  plugin: obfs
-  plugin-opts:
-    mode: http
-    host: b3e9af3d1d.microsoft.com
-  udp: true
-  tfo: false
+proxies: []
 proxy-groups:
 - name: ♻️ 手动切换
   type: select
