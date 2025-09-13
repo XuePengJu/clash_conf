@@ -23,10 +23,15 @@ dns:
     ipcidr:
     - 240.0.0.0/4
     - 0.0.0.0/32
-proxies: []
+proxies: 
+- name: direct-proxy
+  type: direct
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
   - DIRECT
-rules: []
+  - direct-proxy
+  - http-proxy
+rules:
+  - MATCH,DIRECT
