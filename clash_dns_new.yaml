@@ -50,8 +50,4 @@ proxies:
   proxies:
   - DIRECT
 
-rules: 
-- name: PROXY
-  type: select
-  proxies:
-  - DIRECT
+rules: []
