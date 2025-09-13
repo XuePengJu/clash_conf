@@ -44,6 +44,12 @@ dns:
   - 223.5.5.5
   - 119.29.29.29
 
+proxies:
+- name: PROXY
+  type: select
+  proxies:
+  - DIRECT
+
 rules: 
 - name: PROXY
   type: select
