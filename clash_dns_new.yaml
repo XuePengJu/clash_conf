@@ -26,6 +26,11 @@ dns:
 proxies: 
 - name: direct-proxy
   type: direct
+- name: http-proxy
+  type: http
+  server: 127.0.0.1
+  port: 8080
+
 proxy-groups:
 - name: PROXY
   type: select
